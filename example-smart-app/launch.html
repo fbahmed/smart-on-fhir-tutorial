@@ -23,11 +23,15 @@
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+    <script src='https://github.com/smart-on-fhir/client-js'></script>
     <script>
       FHIR.oauth2.authorize({
-        'client_id': 'df7c5a17-52dd-4c88-8a32-cdfb557ba758',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+        'response_type' : 'code',
+        'client_id': '49540569-a0b0-4e4d-80e8-b49324709548',
+        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile',
+        'redirect_uri': 'https://speedyrecovery.z6.web.core.windows.net/'
+      
+      
       });
     </script>
     <div class="spinner">
